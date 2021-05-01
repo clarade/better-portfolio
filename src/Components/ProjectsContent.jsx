@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { Row } from "reactstrap";
+import { Box } from "rebass";
 
 import junggler from "../../Assets/junggler.jpg";
 import parade from "../../Assets/parade.jpg";
 import aerialist from "../../Assets/aerialist.jpg";
 import ShowItem from "./ShowItem";
 
-function Shows() {
+function ProjectsContent() {
     const [items] = useState([
         {
             title: "Memory",
@@ -16,14 +16,14 @@ function Shows() {
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque nobis, ipsam voluptatem quae dicta ullam quis distinctio voluptas omnis similique!"
         },
         {
-            title: "Parade",
+            title: "Résolab",
             subtitle: "Tuesday, Friday and Sunday",
             image: parade,
             desc:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque nobis, ipsam voluptatem quae dicta ullam quis distinctio voluptas omnis similique!"
         },
         {
-            title: "Aerialists show",
+            title: "Sketchy Stories",
             subtitle: "Thursday and Saturday",
             image: aerialist,
             desc:
@@ -31,12 +31,12 @@ function Shows() {
         }
     ]);
     return (
-        <Row xs="3">
+        <Box xs="3">
             {items.map(item => {
                 return <ShowItem {...item} />;
             })}
-        </Row>
+        </Box>
     );
 }
 
-export default Shows;
+export default ProjectsContent;

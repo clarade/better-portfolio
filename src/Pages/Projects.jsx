@@ -1,5 +1,5 @@
 import { Card, Heading } from "rebass";
-import DisplayProjects from "./DisplayProjects";
+import DisplayProjects from "../DisplayProjects";
 
 function Projects() {
     const [projects] = useState([
